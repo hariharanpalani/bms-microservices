@@ -16,8 +16,8 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up �d
 3. Wait for docker compose all microservices. That�s it! 
 4. Once all the microservices are running, browser the following API gateway urls to get list of users and attributes,
 
-* [Get Users](http://localhost:7000/Users)
-* [Get Attributes](http://localhost:7000/Attributes)
+* **Get Users** [http://localhost:7000/Users](http://localhost:7000/Users)
+* **Get Attributes** [http://localhost:7000/Attributes](http://localhost:7000/Attributes)
 
 5. To access the swagger for individual APIs, use following urls,
 
