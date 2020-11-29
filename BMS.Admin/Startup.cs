@@ -39,7 +39,7 @@ namespace BMS.Admin
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BM Admin API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BMS Admin API", Version = "v1" });
             });
         }
 

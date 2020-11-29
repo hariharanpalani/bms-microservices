@@ -13,4 +13,14 @@ Follow these steps to get your development environment set up: (Before Run Start
 ```csharp
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up –d
 ```
-3. Wait for docker compose all microservices. That’s it! (some microservices need extra time to work so please wait if not worked in first shut)
+3. Wait for docker compose all microservices. That’s it! 
+4. Once all the microservices are running, browser the following API gateway urls to get list of users and attributes,
+```csharp
+http://localhost:7000/Users
+http://localhost:7000/Attributes
+```
+5. To access the swagger for individual APIs, use following urls,
+```csharp
+### BMS Admin API ### - http://localhost:8001/swagger/index.html
+### BMS Master API ### - http://localhost:8002/swagger/index.html
+```
