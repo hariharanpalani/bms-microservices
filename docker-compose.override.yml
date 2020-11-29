@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  bms.admin:
+    container_name: bmsadmin
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8001:80"
+
+  bms.master:
+    container_name: bmsmaster
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8002:80"
+
+  bms.apigateway:
+    container_name: bmsapigateway
+    depends_on:
+      - bms.admin
+      - bms.master
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "7000:80"
+

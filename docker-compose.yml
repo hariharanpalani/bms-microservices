@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  bms.admin:
+    image: ${DOCKER_REGISTRY-}bmsadmin
+    build:
+      context: .
+      dockerfile: BMS.Admin/Dockerfile
+
+  bms.master:
+    image: ${DOCKER_REGISTRY-}bmsmaster
+    build:
+      context: .
+      dockerfile: BMS.Master/Dockerfile
+
+
+  bms.apigateway:
+    image: ${DOCKER_REGISTRY-}bmsapigateway
+    build:
+      context: .
+      dockerfile: BMS.ApiGateway/Dockerfile
+

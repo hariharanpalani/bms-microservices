@@ -1,0 +1,30 @@
+{
+  "Routes": [
+    //Admin API
+    {
+      "DownstreamPathTemplate": "/api/v1/User",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bmsadmin",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Users",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    },
+    //Master API
+    {
+      "DownstreamPathTemplate": "/api/v1/Attribute",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "bmsmaster",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Attributes",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    }
+  ]
+}
