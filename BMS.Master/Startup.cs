@@ -30,6 +30,8 @@ namespace BMS.Master
         {
             services.AddControllers();
 
+            services.AddCors();
+
             services.AddDbContext<MasterContext>(c =>
                 c.UseInMemoryDatabase("MasterDB"));
 
@@ -49,6 +51,8 @@ namespace BMS.Master
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod());
 
             app.UseRouting();
 

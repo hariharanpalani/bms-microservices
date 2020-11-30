@@ -31,6 +31,8 @@ namespace BMS.Admin
         {
             services.AddControllers();
 
+            services.AddCors();
+
             services.AddDbContext<AdminContext>(c =>
                 c.UseInMemoryDatabase("AdminDB"));
 
@@ -50,6 +52,8 @@ namespace BMS.Admin
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod());
 
             app.UseRouting();
 

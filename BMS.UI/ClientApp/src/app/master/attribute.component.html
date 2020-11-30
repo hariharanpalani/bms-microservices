@@ -1,0 +1,17 @@
+<h3>Attributes</h3>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Control Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let attribute of attributes">
+        <th scope="row">{{attribute.id}}</th>
+        <td>{{attribute.name}}</td>
+        <td>{{attribute.controlType}}</td>
+      </tr>
+    </tbody>
+  </table>
